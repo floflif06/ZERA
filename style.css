@@ -522,3 +522,100 @@ main {
     color: #d8b36a;
     text-decoration: none;
 }
+
+.updates-section {
+    padding-top: 36px;
+}
+
+.updates-hint {
+    margin: 0 0 16px;
+    color: rgba(246, 244, 239, 0.55);
+    font-size: 0.95rem;
+}
+
+.updates-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 8px 4px 18px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #d8b36a rgba(255, 255, 255, 0.08);
+}
+
+.updates-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.updates-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 999px;
+}
+
+.updates-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #d8b36a, #b38242);
+    border-radius: 999px;
+}
+
+.update-card {
+    flex: 0 0 340px;
+    min-height: 260px;
+    padding: 24px;
+    scroll-snap-align: start;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015)),
+        rgba(14, 18, 26, 0.82);
+}
+
+.update-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(216, 179, 106, 0.28);
+}
+
+.update-featured {
+    flex: 0 0 460px;
+    background:
+        linear-gradient(180deg, rgba(216, 179, 106, 0.08), rgba(255, 255, 255, 0.02)),
+        rgba(14, 18, 26, 0.9);
+}
+
+.update-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(216, 179, 106, 0.12);
+    border: 1px solid rgba(216, 179, 106, 0.24);
+    color: #f0c97c;
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.update-date {
+    margin: 0 0 10px;
+    color: rgba(246, 244, 239, 0.55);
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.update-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.update-card p:last-child {
+    margin-bottom: 0;
+    color: rgba(246, 244, 239, 0.74);
+    line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+    .update-card,
+    .update-featured {
+        flex: 0 0 86vw;
+    }
+}
