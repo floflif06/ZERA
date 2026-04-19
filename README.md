@@ -32,8 +32,8 @@ Pour modifier le site :
 
 ## Contact
 
-- Discord du projet
-- e-mail : `zera.contact.frl@gmail.com`
+- Discord du projet : `https://discord.gg/8SdwvnQXYp`
+- e-mail : `zera.contact.fr@gmail.com`
 
 ## Droits
 
