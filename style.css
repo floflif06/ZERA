@@ -619,3 +619,60 @@ main {
         flex: 0 0 86vw;
     }
 }
+.origin-section {
+    padding-top: 36px;
+}
+
+.origin-panel {
+    padding: 34px;
+    background:
+        linear-gradient(180deg, rgba(216, 179, 106, 0.06), rgba(255, 255, 255, 0.02)),
+        rgba(14, 18, 26, 0.86);
+}
+
+.origin-lead {
+    margin: 0 0 22px;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.origin-body {
+    display: grid;
+    gap: 18px;
+}
+
+.origin-body p {
+    margin: 0;
+    line-height: 1.85;
+    color: var(--muted);
+}
+
+.origin-quote {
+    margin: 28px 0 0;
+    padding: 18px 0 18px 22px;
+    border-left: 3px solid var(--accent);
+    color: var(--text);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.origin-signature {
+    margin: 20px 0 0;
+    color: var(--accent-strong);
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+    .origin-panel {
+        padding: 24px;
+    }
+
+    .origin-quote {
+        font-size: 1.02rem;
+        padding-left: 16px;
+    }
+}
