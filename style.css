@@ -749,16 +749,25 @@ main {
     margin-top: 18px;
 }
 
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 18px;
+}
+
 .footer-socials a {
-    width: 46px;
-    height: 46px;
+    width: 52px;
+    height: 52px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 14px;
+    border-radius: 16px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+    overflow: hidden;
 }
 
 .footer-socials a:hover {
@@ -768,8 +777,9 @@ main {
 }
 
 .footer-socials img {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
     display: block;
 }
+
