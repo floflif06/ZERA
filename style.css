@@ -162,6 +162,26 @@ a {
     padding-left: 20px;
 }
 
+.menu-link-button {
+    width: 100%;
+    display: block;
+    padding: 14px 16px;
+    border: 0;
+    border-radius: 16px;
+    background: transparent;
+    color: var(--text);
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+    transition: background 0.22s ease, color 0.22s ease, padding-left 0.22s ease;
+}
+
+.menu-link-button:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--accent-strong);
+    padding-left: 20px;
+}
+
 .brand {
     justify-self: center;
     display: inline-flex;
@@ -433,75 +453,6 @@ main {
     align-items: center;
 }
 
-@media (max-width: 960px) {
-    .header-inner {
-        grid-template-columns: auto 1fr;
-    }
-
-    .brand {
-        justify-self: start;
-    }
-
-    .header-cta {
-        display: none;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding-top: 24px;
-    }
-
-    .cards,
-    .split-layout,
-    .contact-panel {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 640px) {
-    .site-header {
-        padding: 14px 14px 0;
-    }
-
-    main {
-        padding: 24px 14px 80px;
-    }
-
-    .header-inner {
-        gap: 12px;
-    }
-
-    .menu {
-        width: min(86vw, 290px);
-    }
-
-    .brand-text small {
-        letter-spacing: 0.08em;
-    }
-
-    .hero h1 {
-        letter-spacing: 0.08em;
-    }
-
-    .hero-card,
-    .panel-large,
-    .card,
-    .info-panel,
-    .contact-panel {
-        padding: 22px;
-    }
-
-    .hero-actions,
-    .contact-actions {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-}
-
 .site-footer {
     padding: 30px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -613,12 +564,6 @@ main {
     line-height: 1.75;
 }
 
-@media (max-width: 640px) {
-    .update-card,
-    .update-featured {
-        flex: 0 0 86vw;
-    }
-}
 .origin-section {
     padding-top: 36px;
 }
@@ -664,17 +609,6 @@ main {
     font-size: 0.82rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-}
-
-@media (max-width: 640px) {
-    .origin-panel {
-        padding: 24px;
-    }
-
-    .origin-quote {
-        font-size: 1.02rem;
-        padding-left: 16px;
-    }
 }
 
 .rdv-layout {
@@ -735,9 +669,212 @@ main {
     color: rgba(246, 244, 239, 0.74);
 }
 
+.events-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 7, 11, 0.62);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.26s ease, visibility 0.26s ease;
+    z-index: 1100;
+}
+
+.events-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.events-drawer {
+    position: fixed;
+    top: 0;
+    right: -430px;
+    width: min(420px, 100vw);
+    height: 100vh;
+    padding: 28px;
+    background: rgba(8, 10, 15, 0.98);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.45);
+    overflow-y: auto;
+    transition: right 0.28s ease;
+    z-index: 1200;
+}
+
+.events-drawer.active {
+    right: 0;
+}
+
+.events-drawer-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.events-drawer-kicker {
+    margin: 0 0 8px;
+    color: var(--accent-strong);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.events-drawer-head h2 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.05;
+}
+
+.events-drawer-close {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.events-drawer-list {
+    display: grid;
+    gap: 16px;
+}
+
+.event-mini-card {
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015)),
+        rgba(14, 18, 26, 0.82);
+}
+
+.event-mini-main {
+    background:
+        linear-gradient(180deg, rgba(216, 179, 106, 0.08), rgba(255, 255, 255, 0.02)),
+        rgba(14, 18, 26, 0.9);
+}
+
+.event-mini-tag {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(216, 179, 106, 0.12);
+    border: 1px solid rgba(216, 179, 106, 0.24);
+    color: #f0c97c;
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.event-mini-date {
+    margin: 0 0 10px;
+    color: rgba(246, 244, 239, 0.55);
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.event-mini-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.event-mini-card p:last-child {
+    margin-bottom: 0;
+    color: rgba(246, 244, 239, 0.74);
+    line-height: 1.75;
+}
+
 @media (max-width: 960px) {
+    .header-inner {
+        grid-template-columns: auto 1fr;
+    }
+
+    .brand {
+        justify-self: start;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 24px;
+    }
+
+    .cards,
+    .split-layout,
+    .contact-panel,
     .rdv-layout {
         grid-template-columns: 1fr;
     }
 }
 
+@media (max-width: 640px) {
+    .site-header {
+        padding: 14px 14px 0;
+    }
+
+    main {
+        padding: 24px 14px 80px;
+    }
+
+    .header-inner {
+        gap: 12px;
+    }
+
+    .menu {
+        width: min(86vw, 290px);
+    }
+
+    .brand-text small {
+        letter-spacing: 0.08em;
+    }
+
+    .hero h1 {
+        letter-spacing: 0.08em;
+    }
+
+    .hero-card,
+    .panel-large,
+    .card,
+    .info-panel,
+    .contact-panel,
+    .origin-panel,
+    .rdv-main,
+    .rdv-side {
+        padding: 22px;
+    }
+
+    .hero-actions,
+    .contact-actions,
+    .rdv-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .update-card,
+    .update-featured {
+        flex: 0 0 86vw;
+    }
+
+    .origin-quote {
+        font-size: 1.02rem;
+        padding-left: 16px;
+    }
+
+    .events-drawer {
+        width: 100vw;
+        right: -100vw;
+        padding: 22px;
+    }
+}
