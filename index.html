@@ -41,6 +41,9 @@
                     <a href="#origine">L'origine de ZERA</a>
                     <a href="#equipe">L'equipe</a>
                     <a href="#actualites">Actualites</a>
+                    <button class="menu-link-button" id="eventsPanelButton" type="button" aria-expanded="false" aria-controls="eventsDrawer">
+                        Evenements
+                    </button>
                     <a href="#casting">Casting</a>
                     <a href="#rendezvous">Rendez-vous</a>
                     <a href="#contact">Contact</a>
@@ -59,6 +62,45 @@
         </div>
     </header>
 
+    <div class="events-overlay" id="eventsOverlay"></div>
+
+    <aside class="events-drawer" id="eventsDrawer" aria-hidden="true">
+        <div class="events-drawer-head">
+            <div>
+                <p class="events-drawer-kicker">A venir</p>
+                <h2>Evenements ZERA</h2>
+            </div>
+
+            <button class="events-drawer-close" id="closeEventsButton" type="button" aria-label="Fermer les evenements">
+                ×
+            </button>
+        </div>
+
+        <!--<div class="events-drawer-list">
+            <article class="event-mini-card event-mini-main">
+                <span class="event-mini-tag">A venir</span>
+                <p class="event-mini-date">Date a annoncer</p>
+                <h3>Prochain gros evenement</h3>
+                <p>Remplace ce texte par ton prochain reveal, teaser, annonce ou sortie.</p>
+            </article>
+
+            <article class="event-mini-card">
+                <span class="event-mini-tag">En preparation</span>
+                <p class="event-mini-date">Date a definir</p>
+                <h3>Evenement secondaire</h3>
+                <p>Ajoute ici une annonce plus petite ou une etape de production.</p>
+            </article>
+
+            <article class="event-mini-card">
+                <span class="event-mini-tag">Prochainement</span>
+                <p class="event-mini-date">Date a definir</p>
+                <h3>Annonce future</h3>
+                <p>Tu pourras modifier ce bloc quand tu auras une nouvelle date.</p>
+            </article>
+        </div>
+        -->
+    </aside>
+
     <main id="top">
         <section class="hero">
             <div class="hero-copy">
@@ -68,12 +110,13 @@
                     Une serie audio sombre, tendue et immersive ou la peur, le controle et la survie dictent chaque nuit.
                 </p>
 
-              <div class="hero-actions">
-    <a class="btn btn-primary" href="#casting">Participer au projet</a>
-    <a class="btn btn-secondary" href="#histoire">Decouvrir l'univers</a>
-    <a class="btn btn-secondary" href="https://open.spotify.com/show/3aS70rKl8V94NNZmHlY2To?si=e6693e7e41224291" target="_blank" rel="noreferrer">Ecouter sur Spotify</a>
-</div>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#casting">Participer au projet</a>
+                    <a class="btn btn-secondary" href="#histoire">Decouvrir l'univers</a>
+                    <a class="btn btn-secondary" href="https://open.spotify.com/show/3aS70rKl8V94NNZmHlY2To?si=e6693e7e41224291" target="_blank" rel="noreferrer">Ecouter sur Spotify</a>
+                </div>
             </div>
+
             <aside class="hero-card">
                 <p class="card-label">Ambiance</p>
                 <h2>Obscure. Humaine. Inquietante.</h2>
@@ -112,42 +155,44 @@
                 </p>
             </div>
         </section>
-<section class="section origin-section" id="origine">
-    <div class="section-title">
-        <p class="section-kicker">Note d'auteur</p>
-        <h2>L'origine de ZERA</h2>
-    </div>
 
-    <div class="panel origin-panel">
-        <p class="origin-lead">
-            Depuis plusieurs annees, je reve de creer mon propre univers.
-        </p>
+        <section class="section origin-section" id="origine">
+            <div class="section-title">
+                <p class="section-kicker">Note d'auteur</p>
+                <h2>L'origine de ZERA</h2>
+            </div>
 
-        <div class="origin-body">
-            <p>
-                Au depart, j'imaginais surtout un dessin anime, puis une serie televisee. Pas pour en faire mon metier, mais simplement pour vivre cette experience au moins une fois et donner vie a une histoire qui m'appartienne vraiment.
-            </p>
+            <div class="panel origin-panel">
+                <p class="origin-lead">
+                    Depuis plusieurs annees, je reve de creer mon propre univers.
+                </p>
 
-            <p>
-                En 2025, je me suis pose une question simple : et si ce projet devenait un livre, ou une serie audio ? J'ai finalement choisi la serie audio, parce qu'elle me permettait de creer avec des moyens plus accessibles, sans avoir besoin de competences avancees en dessin ou en animation.
-            </p>
+                <div class="origin-body">
+                    <p>
+                        Au depart, j'imaginais surtout un dessin anime, puis une serie televisee. Pas pour en faire mon metier, mais simplement pour vivre cette experience au moins une fois et donner vie a une histoire qui m'appartienne vraiment.
+                    </p>
 
-            <p>
-                Avec une serie audio, l'essentiel repose sur les voix, l'ambiance, l'ecriture et la direction technique. C'etait la forme la plus juste pour commencer a construire ZERA de maniere concrete.
-            </p>
+                    <p>
+                        En 2025, je me suis pose une question simple : et si ce projet devenait un livre, ou une serie audio ? J'ai finalement choisi la serie audio, parce qu'elle me permettait de creer avec des moyens plus accessibles, sans avoir besoin de competences avancees en dessin ou en animation.
+                    </p>
 
-            <p>
-                Au fond, mon reve reste le meme : qu'un jour, une entreprise du cinema ou de l'audiovisuel decouvre ce projet, me contacte, et me dise que cet univers merite peut-etre d'aller encore plus loin.
-            </p>
-        </div>
+                    <p>
+                        Avec une serie audio, l'essentiel repose sur les voix, l'ambiance, l'ecriture et la direction technique. C'etait la forme la plus juste pour commencer a construire ZERA de maniere concrete.
+                    </p>
 
-        <blockquote class="origin-quote">
-            "ZERA est ne d'un reve simple : creer un univers a moi, et lui donner une vraie existence."
-        </blockquote>
+                    <p>
+                        Au fond, mon reve reste le meme : qu'un jour, une entreprise du cinema ou de l'audiovisuel decouvre ce projet, me contacte, et me dise que cet univers merite peut-etre d'aller encore plus loin.
+                    </p>
+                </div>
 
-        <p class="origin-signature">- Createur de ZERA</p>
-    </div>
-</section>
+                <blockquote class="origin-quote">
+                    "ZERA est ne d'un reve simple : creer un univers a moi, et lui donner une vraie existence."
+                </blockquote>
+
+                <p class="origin-signature">- Createur de ZERA</p>
+            </div>
+        </section>
+
         <section class="section cards-section" id="equipe">
             <div class="section-title">
                 <p class="section-kicker">Vision</p>
@@ -169,51 +214,52 @@
                 </article>
             </div>
         </section>
+
         <section class="section updates-section" id="actualites">
-    <div class="section-title">
-        <p class="section-kicker">Actualites</p>
-        <h2>Suivre l'avancement de ZERA</h2>
-    </div>
+            <div class="section-title">
+                <p class="section-kicker">Actualites</p>
+                <h2>Suivre l'avancement de ZERA</h2>
+            </div>
 
-    <p class="updates-hint">Fais glisser de gauche a droite pour voir les updates.</p>
+            <p class="updates-hint">Fais glisser de gauche a droite pour voir les updates.</p>
 
-    <div class="updates-scroll">
-        <article class="panel update-card update-featured">
-            <span class="update-tag">Site officiel</span>
-            <p class="update-date">19 avril 2026</p>
-            <h3>Ouverture du site</h3>
-            <p>Le site officiel de ZERA ouvre ses portes avec une premiere presentation du projet, du casting et des moyens de contact.</p>
-        </article>
+            <div class="updates-scroll">
+                <article class="panel update-card update-featured">
+                    <span class="update-tag">Site officiel</span>
+                    <p class="update-date">19 avril 2026</p>
+                    <h3>Ouverture du site</h3>
+                    <p>Le site officiel de ZERA ouvre ses portes avec une premiere presentation du projet, du casting et des moyens de contact.</p>
+                </article>
 
-        <article class="panel update-card">
-            <span class="update-tag">Reseaux</span>
-            <p class="update-date">05 decembre 2025</p>
-            <h3>Creation des comptes TikTok et Insta</h3>
-            <p>L'univers de ZERA commence a s'etendre sur les reseaux sociaux pour partager l'ambiance du projet et les prochaines annonces.</p>
-        </article>
+                <article class="panel update-card">
+                    <span class="update-tag">Reseaux</span>
+                    <p class="update-date">05 decembre 2025</p>
+                    <h3>Creation des comptes TikTok et Insta</h3>
+                    <p>L'univers de ZERA commence a s'etendre sur les reseaux sociaux pour partager l'ambiance du projet et les prochaines annonces.</p>
+                </article>
 
-        <article class="panel update-card">
-            <span class="update-tag">Production</span>
-            <p class="update-date">04 novembre 2025</p>
-            <h3>Debut de la creation de l'episode 1</h3>
-            <p>L'ecriture et la mise en forme du premier episode entrent en phase de developpement.</p>
-        </article>
+                <article class="panel update-card">
+                    <span class="update-tag">Production</span>
+                    <p class="update-date">04 novembre 2025</p>
+                    <h3>Debut de la creation de l'episode 1</h3>
+                    <p>L'ecriture et la mise en forme du premier episode entrent en phase de developpement.</p>
+                </article>
 
-        <article class="panel update-card">
-            <span class="update-tag">Spotify</span>
-            <p class="update-date">26 juin 2025</p>
-            <h3>Bande-annonce disponible sur Spotify</h3>
-            <p>La bande-annonce de ZERA devient accessible sur Spotify pour donner un premier apercu de l'ambiance sonore du projet.</p>
-        </article>
+                <article class="panel update-card">
+                    <span class="update-tag">Spotify</span>
+                    <p class="update-date">26 juin 2025</p>
+                    <h3>Bande-annonce disponible sur Spotify</h3>
+                    <p>La bande-annonce de ZERA devient accessible sur Spotify pour donner un premier apercu de l'ambiance sonore du projet.</p>
+                </article>
 
-        <article class="panel update-card">
-            <span class="update-tag">Communaute</span>
-            <p class="update-date">25 juin 2025</p>
-            <h3>Creation du Discord</h3>
-            <p>Le serveur Discord est lance pour reunir la communaute, partager les avancees et accueillir les futures participations.</p>
-        </article>
-    </div>
-</section>
+                <article class="panel update-card">
+                    <span class="update-tag">Communaute</span>
+                    <p class="update-date">25 juin 2025</p>
+                    <h3>Creation du Discord</h3>
+                    <p>Le serveur Discord est lance pour reunir la communaute, partager les avancees et accueillir les futures participations.</p>
+                </article>
+            </div>
+        </section>
 
         <section class="section cards-section" id="casting">
             <div class="section-title">
@@ -238,44 +284,43 @@
             </div>
         </section>
 
-       <section class="section split-section" id="rendezvous">
-    <div class="section-title">
-        <p class="section-kicker">Echange</p>
-        <h2>Prendre rendez-vous</h2>
-    </div>
-
-    <div class="rdv-layout">
-        <div class="panel rdv-main">
-            <p class="rdv-lead">
-                Tu veux discuter du projet, proposer ta voix ou parler d'une collaboration autour de ZERA ?
-            </p>
-
-            <p>
-                Le moyen le plus simple est d'envoyer une demande claire avec ton nom, ton profil et le sujet que tu veux aborder. Je te recontacte ensuite pour organiser un echange.
-            </p>
-
-            <div class="rdv-actions">
-                <a class="btn btn-primary" href="mailto:zera.contact.fr@gmail.com?subject=Demande%20de%20rendez-vous%20-%20ZERA&body=Bonjour%2C%0D%0A%0D%0AJe%20souhaite%20échanger%20à%20propos%20de%20ZERA.%0D%0A%0D%0ANom%20:%0D%0AProfil%20:%0D%0ASujet%20:%0D%0ADisponibilités%20:%0D%0A">Faire une demande</a>
-                <a class="btn btn-secondary" href="https://discord.gg/jKU9pPCFZd" target="_blank" rel="noreferrer">Passer par Discord</a>
+        <section class="section split-section" id="rendezvous">
+            <div class="section-title">
+                <p class="section-kicker">Echange</p>
+                <h2>Prendre rendez-vous</h2>
             </div>
-        </div>
 
-        <div class="panel rdv-side">
-            <span class="rdv-badge">Mode de contact</span>
-            <h3>Une prise de contact simple et directe</h3>
-            <p>
-                Pour l'instant, les rendez-vous se font sur demande. Un agenda en ligne pourra etre ajoute plus tard si le projet evolue.
-            </p>
+            <div class="rdv-layout">
+                <div class="panel rdv-main">
+                    <p class="rdv-lead">
+                        Tu veux discuter du projet, proposer ta voix ou parler d'une collaboration autour de ZERA ?
+                    </p>
 
-            <div class="rdv-steps">
-                <p><strong>1.</strong> Tu envoies ta demande</p>
-                <p><strong>2.</strong> Tu expliques ton objectif</p>
-                <p><strong>3.</strong> Un echange est organise ensuite</p>
+                    <p>
+                        Le moyen le plus simple est d'envoyer une demande claire avec ton nom, ton profil et le sujet que tu veux aborder. Je te recontacte ensuite pour organiser un echange.
+                    </p>
+
+                    <div class="rdv-actions">
+                        <a class="btn btn-primary" href="mailto:zera.contact.fr@gmail.com?subject=Demande%20de%20rendez-vous%20-%20ZERA&body=Bonjour%2C%0D%0A%0D%0AJe%20souhaite%20echanger%20a%20propos%20de%20ZERA.%0D%0A%0D%0ANom%20:%0D%0AProfil%20:%0D%0ASujet%20:%0D%0ADisponibilites%20:%0D%0A">Faire une demande</a>
+                        <a class="btn btn-secondary" href="https://discord.gg/jKU9pPCFZd" target="_blank" rel="noreferrer">Passer par Discord</a>
+                    </div>
+                </div>
+
+                <div class="panel rdv-side">
+                    <span class="rdv-badge">Mode de contact</span>
+                    <h3>Une prise de contact simple et directe</h3>
+                    <p>
+                        Pour l'instant, les rendez-vous se font sur demande. Un agenda en ligne pourra etre ajoute plus tard si le projet evolue.
+                    </p>
+
+                    <div class="rdv-steps">
+                        <p><strong>1.</strong> Tu envoies ta demande</p>
+                        <p><strong>2.</strong> Tu expliques ton objectif</p>
+                        <p><strong>3.</strong> Un echange est organise ensuite</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-
+        </section>
 
         <section class="section contact-section" id="contact">
             <div class="panel contact-panel">
@@ -294,17 +339,21 @@
         </section>
     </main>
 
-   <footer class="site-footer">
-    <div class="footer-inner">
-        <p>&copy; 2026 ZERA. Tous droits reserves.</p>
-        <p>Serie audio originale. L'univers, les textes, les visuels et le concept de ZERA sont proteges.</p>
-        <p>Contact : <a href="mailto:zera.contact.fr@gmail.com">zera.contact.fr@gmail.com</a></p>
-    </div>
-</footer>
-    
-   <script>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 ZERA. Tous droits reserves.</p>
+            <p>Serie audio originale. L'univers, les textes, les visuels et le concept de ZERA sont proteges.</p>
+            <p>Contact : <a href="mailto:zera.contact.fr@gmail.com">zera.contact.fr@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
         const menuButton = document.getElementById("menuButton");
         const menuPanel = document.getElementById("menuPanel");
+        const eventsPanelButton = document.getElementById("eventsPanelButton");
+        const eventsDrawer = document.getElementById("eventsDrawer");
+        const eventsOverlay = document.getElementById("eventsOverlay");
+        const closeEventsButton = document.getElementById("closeEventsButton");
 
         function closeMenu() {
             menuPanel.classList.remove("active");
@@ -316,7 +365,33 @@
             menuButton.setAttribute("aria-expanded", String(isOpen));
         }
 
+        function openEventsPanel() {
+            closeMenu();
+            eventsDrawer.classList.add("active");
+            eventsOverlay.classList.add("active");
+            eventsDrawer.setAttribute("aria-hidden", "false");
+            eventsPanelButton.setAttribute("aria-expanded", "true");
+        }
+
+        function closeEventsPanel() {
+            eventsDrawer.classList.remove("active");
+            eventsOverlay.classList.remove("active");
+            eventsDrawer.setAttribute("aria-hidden", "true");
+            eventsPanelButton.setAttribute("aria-expanded", "false");
+        }
+
         menuButton.addEventListener("click", toggleMenu);
+
+        eventsPanelButton.addEventListener("click", () => {
+            if (eventsDrawer.classList.contains("active")) {
+                closeEventsPanel();
+            } else {
+                openEventsPanel();
+            }
+        });
+
+        closeEventsButton.addEventListener("click", closeEventsPanel);
+        eventsOverlay.addEventListener("click", closeEventsPanel);
 
         document.addEventListener("click", (event) => {
             if (!menuPanel.contains(event.target) && !menuButton.contains(event.target)) {
@@ -327,6 +402,7 @@
         document.addEventListener("keydown", (event) => {
             if (event.key === "Escape") {
                 closeMenu();
+                closeEventsPanel();
             }
         });
 
